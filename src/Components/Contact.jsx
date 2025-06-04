@@ -1,48 +1,25 @@
-import React, {useState} from 'react'
+import { useState } from 'react';
 
-export default function Contact() {
-    const [contactData, setContactData] = useState({
-        firstName: "",
-        lastName: "",
-        email: "",
-        message: ""
-    })
-    function handleChange(e) {
-        const {name, value} = e.target
-        setContactData({ ...contactData, [name]: value })
-    }
+function ContactForm() {
+  const [form, setForm] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    comments: ''
+  });
 
-    function handleSubmit(e) {
-        e.preventDefault()
-        console.log(contactData)
-    }
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   return (
-    <>
-    <h2>Contact Form</h2>
-    <form>
-      <label>
-        First Name:
-        <input type="text" name="firstName" onChange={handleChange} />
-      </label>
-      <br />
-      <label>
-        Last Name:
-        <input type="text" name="lastName" onChange={handleChange} />
-      </label>
-      <br />
-      <label>
-        Email:
-        <input type="email" name="email" onChange={handleChange} />
-      </label>
-      <br />
-      <label>
-        Message:
-        <textarea name="message" onChange={handleChange} />
-      </label>
-      <br />
-      <button onClick={handleSubmit}>Submit</button>
+    <form className="contact-form">
+      <input name="firstName" placeholder="First Name" onChange={handleChange} value={form.firstName} />
+      <input name="lastName" placeholder="Last Name" onChange={handleChange} value={form.lastName} />
+      <input name="email" type="email" placeholder="Email" onChange={handleChange} value={form.email} />
+      <textarea name="comments" placeholder="Comments" onChange={handleChange} value={form.comments} />
+      <button type="submit" disabled>Submit</button> {/* functionality optional */}
     </form>
-    </>
-  )
+  );
 }
+export default ContactForm;
