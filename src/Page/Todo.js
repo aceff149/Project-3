@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import TodoForm from '../components/TodoForm';
-import TodoItem from '../components/TodoItem';
+import React, {useState} from 'react'
+import TodoForm from '../Components/ToDoForm';
+import TodoItem from '../Components/ToDoList';
 
 function Todos() {
   const [todos, setTodos] = useState([
@@ -46,7 +46,7 @@ function Todos() {
         <h2>Todo List</h2>
         {filteredTodos.length === 0 && <p>No tasks to show.</p>}
         {filteredTodos.map(todo => (
-          <TodoItem
+          <TodoList
             key={todo.id}
             todo={todo}
             toggleComplete={toggleComplete}
