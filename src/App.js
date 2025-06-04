@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AppNavbar from './components/Navbar';
-import Todos from './pages/Todos';
-import Contact from './pages/Contact';
+import AppNavbar from './Components/Navbar';
+import Todos from './Compontents/Todo';
+import Contact from './Components/Contact';
 
 function App() {
   return (
