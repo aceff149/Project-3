@@ -22,12 +22,24 @@ function ContactForm() {
   };
 
   return (
-    <div style={{ maxWidth: "500px", margin: "auto", padding: "auto"}}>
+    <div style={{ maxWidth: "500px", margin: "auto", padding: "10px"}}>
       <h3>Contact Us</h3>
       {submitted && <p style={{ color: "green" }}>Thanks for your message!</p>}
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: "10px" }}>
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">First Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            style={{ width: "100%", padding: "8px", marginTop: "5px" }}
+          />
+        </div>
+          <div style={{ marginBottom: "10px" }}>
+          <label htmlFor="name">Last Name:</label>
           <input
             type="text"
             id="name"

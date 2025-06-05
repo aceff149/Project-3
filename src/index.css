@@ -45,8 +45,6 @@ input, textarea{
     border-radius: 5px;
 }
 
-
-
 .container {
    margin: 0 auto; 
   padding: 20px;
@@ -60,4 +58,13 @@ input, textarea{
 h3 {
   text-align: left;
   font-family:cursive;
+}
+
+button {
+  background-color: olivedrab;
+  color: beige;
+}
+
+button:hover {
+  background-color: #ccc;
 }

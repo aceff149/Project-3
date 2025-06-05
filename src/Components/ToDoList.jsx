@@ -33,6 +33,53 @@ export default function ToDoList({todolist, setToDoList}) {
       setToDoList(deletedList);
     }
 
+    // Task.jsx
+    import { useDrag } from 'react-beautiful-dnd';
+
+    function Task({ task, index }) {
+      const [{ isDragging }, drag] = useDrag({
+        type: 'task',
+        item: { id: task.id, index: index },
+        collect: (monitor) => ({
+          isDragging: monitor.isDragging()
+        })
+      });
+
+      return (
+        <div ref={drag} style={{ opacity: isDragging ? 0.5 : 1 }}>
+          {task.title}
+        </div>
+      );
+    }
+
+    export default Task;
+
+    // List.jsx
+    import { useDrop } from 'react-beautiful-dnd';
+    import Task from './Task'; // Import your Task component
+
+    function List({ tasks, listId, onDrop }) {
+      const [{ isOver }, drop] = useDrop({
+        accept: 'task',
+        drop: (droppedItem) => {
+          onDrop({ sourceListId: listId, droppedItem: droppedItem });
+        },
+        collect: (monitor) => ({
+          isOver: monitor.isOver(),
+        })
+      });
+
+      return (
+        <div ref={drop} style={{ backgroundColor: isOver ? 'lightgreen' : 'white' }}>
+          {tasks.map((task, index) => (
+            <Task key={task.id} task={task} index={index} />
+          ))}
+        </div>
+      );
+    }
+
+    export default List;
+    
     // Function to handle adding a new task
     function handleAddTask (e) {
       e.preventDefault();

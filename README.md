@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Allie Efferson
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Task Prioritizer
 
-## Available Scripts
+## Overview:
+A fun website used to find and share giphys with friends or to click through for entertainment purposes. Users are able to search for similar videos through keyterms in the search bar as well as go through clips at random. This site is used for entertainment purposes and to enjoy fun short clips to send to friends.
 
-In the project directory, you can run:
+## User Stories:
+1. As a user I want to be able to quickly find fun giphys to send to friends via text or social media
+2. As a users I want to find fun 3 second videos to enjoy for their leisure
+3. As a user I want to find a plethora of videos through a specified catagory that best fits their needs entertainment or social purposes.
 
-### `npm start`
+## Wireframe:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features/How to Use:
+1. Allow users to enter personal tasks to keep track of as well as see where they are in the progress of that task.
+2. Allow users to mark tasks as complete or even remove.
+3. Allow users to set a priority level of tasks that need to be completed.
 
-### `npm test`
+## Technologies Used:
+- HTML
+- Javascript
+- CSS
+- Bootstrap
+- React
+- Canva
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Future Improvements:
+ - Add a function drop down calendar for Due Date option
+ - Ability to sort and filter tasks effectively
+ - Color Code Tasks from a users operation
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author:
+[Allie Efferson](https://www.linkedin.com/in/allie-efferson/)
