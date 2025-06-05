@@ -3,9 +3,9 @@ import React, {useState} from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from './Layout/Layout';
-import HomePage from './Pages/HomePage'
-import ContactPage from './Pages/ContactPage'
-import StudentPage from './Pages/StudentPage';
+import HomePage from './Components/HomePage'
+import ContactPage from './Page/Contact'
+import StudentPage from './Page/StudentPage';
 
 
 

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import ListStudents from '../Component/Students/ListStudents'
+import ListStudents from './StudentPage'
 
 export default function StudentPage() {
   const [students, setStudents] = useState([{
