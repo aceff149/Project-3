@@ -3,8 +3,11 @@ import React from 'react'
 export default function HomePage() {
   return (
     <>
-      <h1>Student Portal</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde cupiditate dignissimos rerum praesentium placeat, consequuntur ut tenetur neque consectetur aperiam.</p>
+      <h2>Welcome to Task Prioritizer!</h2>
+        <p>This app allows you to prioritzie, create, and manage your daily/monthly/yearly task efficiently!</p>
+        <h3>We are so excited to help you get your priorities organized!</h3>
+        <hr />
     </>
+   
   )
 }

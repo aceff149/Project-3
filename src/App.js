@@ -1,29 +1,32 @@
-import './App.css';
-import React, {useState} from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Layout from './Layout/Layout';
-import HomePage from './Components/HomePage'
-import ContactPage from './Page/Contact'
-import StudentPage from './Page/StudentPage';
+import React, {useState} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import HomePage from './components/HomePage';
+import Header from './components/Header';
+import ToDoList from './components/ToDoList';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 
 
 function App() {
-  const productList = ["Laptop", "Phone"];
-  
-
+  const [todolist, setToDoList] = React.useState([
+    { id: 1, task: 'Buy groceries', status: 'Not Completed', completed:' ', delete:  ' ' },
+    { id: 2, task: 'Walk the dog', status: 'Not Completed', completed:' ', delete:  ' ' },
+    { id: 3, task: 'Read a book', status: 'Not Completed', completed:' ', delete:  ' ' },
+  ]);
 
   return (
-    <BrowserRouter>
+    <Router>
+      <Header />
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="home" element={<HomePage />} />
-          <Route path="contact" element={<ContactPage />} />
-          <Route path="student" element={<StudentPage />} />
-        </Route>
+        <Route path="/homepage" element={<HomePage />} />
+        <Route path="/todo" element={<ToDoList todolist={todolist} setToDoList={setToDoList}  />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
-    </BrowserRouter>
+      <Footer />
+    </Router>
   );
 }
 
