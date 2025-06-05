@@ -1,9 +1,11 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 
 export default function ToDoList({todolist, setToDoList}) {
-  const ItemComponent = ({ item }) => <li>{item.id}, {item.task}, {item.status}, {item.completed}, {item.delete}</li>;
+  const ItemComponent = ({ item }) => <li>{item.id}, {item.task}, {item.duedate}, {item.status}, {item.completed}, {item.delete}</li>;
 
     const renderedItems = todolist.map((item) => (
       <ItemComponent key={item.id} item={item} />
@@ -57,6 +59,7 @@ export default function ToDoList({todolist, setToDoList}) {
           <tr>
             <th>#</th>
             <th>Task</th>
+            <th>Due Date</th>
             <th>Status</th>
             <th>Complete</th>
             <th>Delete</th>
@@ -67,6 +70,7 @@ export default function ToDoList({todolist, setToDoList}) {
             <tr key={item.id}>
               <td>{item.id}</td>
               <td>{item.task}</td>
+              <td>{item.duedate}</td>
               <td>{item.status}</td>
               <td>{<button onClick={() => handleCompleteButtonClick(item.id)}>Complete</button>}</td>
               <td>{<button onClick={() => handleDeleteButtonClick(item.id)}>Delete</button>}</td>
