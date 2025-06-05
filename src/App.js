@@ -1,18 +1,29 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
 import React, {useState} from 'react'
-import Navbar from './Components/Navbar';
-import Todos from './Page/Todo';
-import Contact from './Page/Contact';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Layout from './Layout/Layout';
+import HomePage from './Pages/HomePage'
+import ContactPage from './Pages/ContactPage'
+import StudentPage from './Pages/StudentPage';
+
+
 
 function App() {
+  const productList = ["Laptop", "Phone"];
+  
+
+
   return (
-    <Router>
-      <Navbar />
+    <BrowserRouter>
       <Routes>
-        <Route path="Todos" element={<Todo />} />
-        <Route path="Contact" element={<Contact />} />
+        <Route path="/" element={<Layout />}>
+          <Route path="home" element={<HomePage />} />
+          <Route path="contact" element={<ContactPage />} />
+          <Route path="student" element={<StudentPage />} />
+        </Route>
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
