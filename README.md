@@ -3,12 +3,12 @@
 ## Task Prioritizer
 
 ## Overview:
-A fun website used to find and share giphys with friends or to click through for entertainment purposes. Users are able to search for similar videos through keyterms in the search bar as well as go through clips at random. This site is used for entertainment purposes and to enjoy fun short clips to send to friends.
+An app used to help organize and prioritize a list of to dos. As well as see my progress on each task as I complete or work on the task created in the list.
 
 ## User Stories:
-1. As a user I want to be able to quickly find fun giphys to send to friends via text or social media
-2. As a users I want to find fun 3 second videos to enjoy for their leisure
-3. As a user I want to find a plethora of videos through a specified catagory that best fits their needs entertainment or social purposes.
+1. As a user I want to be able to prioritize my task as well for the day/month/year
+2. As a users I want to find a fun way to keep track of my to dos for the day
+3. As a user I want to keep track of my progress of what I have accomplished so far on my list.
 
 ## Wireframe:
 
