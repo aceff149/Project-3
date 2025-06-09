@@ -36,8 +36,7 @@ An app used to help organize and prioritize a list of to dos. As well as see my 
 - Canva
 
 ## Future Improvements:
- - Add a function drop down calendar for Due D![Homepage Project 3](https://github.com/user-attachments/assets/30fe7301-25da-46e8-8b8e-19cf92866018)
-ate option
+ - Add a functional drop down calendar for Due Date option
  - Ability to sort and filter tasks effectively
  - Color Code Tasks from a users operation
 
