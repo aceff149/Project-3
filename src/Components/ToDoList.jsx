@@ -1,7 +1,9 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import { useDrag } from 'react-beautiful-dnd';
+import { useDrop } from 'react-beautiful-dnd';
+import Task from './Task';
 
 
 export default function ToDoList({todolist, setToDoList}) {
@@ -11,7 +13,6 @@ export default function ToDoList({todolist, setToDoList}) {
       <ItemComponent key={item.id} item={item} />
     ));
 
-
     // Function to handle complete button click
     function handleCompleteButtonClick(id) {
       const updatedList = todolist.map(item =>
@@ -19,7 +20,6 @@ export default function ToDoList({todolist, setToDoList}) {
       );
       setToDoList(updatedList);
     }
-
 
     // Function to handle delete button click
     function handleDeleteButtonClick(id) {
@@ -33,9 +33,7 @@ export default function ToDoList({todolist, setToDoList}) {
       setToDoList(deletedList);
     }
 
-    // Task.jsx
-    import { useDrag } from 'react-beautiful-dnd';
-
+    // Drag Task.jsx
     function Task({ task, index }) {
       const [{ isDragging }, drag] = useDrag({
         type: 'task',
@@ -52,12 +50,8 @@ export default function ToDoList({todolist, setToDoList}) {
       );
     }
 
-    export default Task;
-
-    // List.jsx
-    import { useDrop } from 'react-beautiful-dnd';
-    import Task from './Task'; // Import your Task component
-
+    // Drop Down Calendar.jsx
+    // Import your Task component
     function List({ tasks, listId, onDrop }) {
       const [{ isOver }, drop] = useDrop({
         accept: 'task',
@@ -78,8 +72,6 @@ export default function ToDoList({todolist, setToDoList}) {
       );
     }
 
-    export default List;
-    
     // Function to handle adding a new task
     function handleAddTask (e) {
       e.preventDefault();
