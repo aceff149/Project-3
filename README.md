@@ -12,6 +12,11 @@ An app used to help organize and prioritize a list of to dos. As well as see my 
 
 ## Wireframe:
 
+## Screenshots:
+![Homepage Project 3](https://github.com/user-attachments/assets/a6346c3b-4a39-4193-947f-7731e95b1a56)
+![To Do Page](https://github.com/user-attachments/assets/5e8ba7a7-9121-4e01-a700-9204018be61e)
+![Contact Page Project 3](https://github.com/user-attachments/assets/594a36d2-a04d-49ba-a8d6-0bd79c830382)
+
 
 ## Features/How to Use:
 1. Allow users to enter personal tasks to keep track of as well as see where they are in the progress of that task.
@@ -27,7 +32,8 @@ An app used to help organize and prioritize a list of to dos. As well as see my 
 - Canva
 
 ## Future Improvements:
- - Add a function drop down calendar for Due Date option
+ - Add a function drop down calendar for Due D![Homepage Project 3](https://github.com/user-attachments/assets/30fe7301-25da-46e8-8b8e-19cf92866018)
+ate option
  - Ability to sort and filter tasks effectively
  - Color Code Tasks from a users operation
 
