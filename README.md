@@ -11,6 +11,10 @@ An app used to help organize and prioritize a list of to dos. As well as see my 
 3. As a user I want to keep track of my progress of what I have accomplished so far on my list.
 
 ## Wireframe:
+![1](https://github.com/user-attachments/assets/da36e8ed-5966-4243-a072-2c8555c7425e)
+![2](https://github.com/user-attachments/assets/c51902d6-15d3-4fef-ace9-3faf356a2dab)
+![3](https://github.com/user-attachments/assets/5442e393-2165-4de6-98b9-bf24501928d0)
+
 
 ## Screenshots:
 ![Homepage Project 3](https://github.com/user-attachments/assets/a6346c3b-4a39-4193-947f-7731e95b1a56)
