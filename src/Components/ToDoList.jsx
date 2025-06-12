@@ -1,9 +1,7 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 import DatePicker from 'react-datepicker';
-import { useDrag } from 'react-beautiful-dnd';
-import { useDrop } from 'react-beautiful-dnd';
-import Task from './Task';
+import Task from './ToDoList';
 
 
 export default function ToDoList({todolist, setToDoList}) {
@@ -33,27 +31,10 @@ export default function ToDoList({todolist, setToDoList}) {
       setToDoList(deletedList);
     }
 
-    // Drag Task.jsx
-    function Task({ task, index }) {
-      const [{ isDragging }, drag] = useDrag({
-        type: 'task',
-        item: { id: task.id, index: index },
-        collect: (monitor) => ({
-          isDragging: monitor.isDragging()
-        })
-      });
-
-      return (
-        <div ref={drag} style={{ opacity: isDragging ? 0.5 : 1 }}>
-          {task.title}
-        </div>
-      );
-    }
-
     // Drop Down Calendar.jsx
     // Import your Task component
     function List({ tasks, listId, onDrop }) {
-      const [{ isOver }, drop] = useDrop({
+      const [{ isOver }, drop] = ({
         accept: 'task',
         drop: (droppedItem) => {
           onDrop({ sourceListId: listId, droppedItem: droppedItem });
@@ -122,3 +103,53 @@ export default function ToDoList({todolist, setToDoList}) {
       </>
   );
 }
+//DragItem.js
+
+const DragItem = ({ name }) => {
+    const [{ isDragging }, drag] = (() => ({
+        type: 'item',
+        item: { name },
+        collect: (monitor) => ({
+            isDragging: monitor.isDragging(),
+        }),
+    }));
+
+    return (
+        <div
+            ref={drag}
+            style={{
+                opacity: isDragging ? 0.5 : 1,
+                cursor: 'move',
+                border: '1px solid #ccc',
+                padding: '10px',
+                borderRadius: '5px',
+                margin: '5px',
+                backgroundColor: 'lightblue',
+            }}>
+            {name}
+        </div>
+    );
+};
+
+// DropZone.js
+
+const DropZone = ({ onDrop }) => {
+    const [{ isOver }, drop] = (() => ({
+        accept: 'item',
+        drop: (item) => onDrop(item),
+        collect: (monitor) => ({
+            isOver: monitor.isOver(),
+        }),
+    }));
+
+    return (
+        <div
+            ref={drop}
+            style={{
+                border: `1px dashed ${isOver ? 'green' : 'black'}`,
+                padding: '10px',
+            }}>
+            Drop here
+        </div>
+    );
+};
