@@ -1,6 +1,5 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
-import DatePicker from 'react-datepicker';
 import Task from './ToDoList';
 
 
@@ -30,29 +29,6 @@ export default function ToDoList({todolist, setToDoList}) {
       }
       setToDoList(deletedList);
     }
-
-    // Drop Down Calendar.jsx
-    // Import your Task component
-    function List({ tasks, listId, onDrop }) {
-      const [{ isOver }, drop] = ({
-        accept: 'task',
-        drop: (droppedItem) => {
-          onDrop({ sourceListId: listId, droppedItem: droppedItem });
-        },
-        collect: (monitor) => ({
-          isOver: monitor.isOver(),
-        })
-      });
-
-      return (
-        <div ref={drop} style={{ backgroundColor: isOver ? 'lightgreen' : 'white' }}>
-          {tasks.map((task, index) => (
-            <Task key={task.id} task={task} index={index} />
-          ))}
-        </div>
-      );
-    }
-
     // Function to handle adding a new task
     function handleAddTask (e) {
       e.preventDefault();
@@ -103,53 +79,3 @@ export default function ToDoList({todolist, setToDoList}) {
       </>
   );
 }
-//DragItem.js
-
-const DragItem = ({ name }) => {
-    const [{ isDragging }, drag] = (() => ({
-        type: 'item',
-        item: { name },
-        collect: (monitor) => ({
-            isDragging: monitor.isDragging(),
-        }),
-    }));
-
-    return (
-        <div
-            ref={drag}
-            style={{
-                opacity: isDragging ? 0.5 : 1,
-                cursor: 'move',
-                border: '1px solid #ccc',
-                padding: '10px',
-                borderRadius: '5px',
-                margin: '5px',
-                backgroundColor: 'lightblue',
-            }}>
-            {name}
-        </div>
-    );
-};
-
-// DropZone.js
-
-const DropZone = ({ onDrop }) => {
-    const [{ isOver }, drop] = (() => ({
-        accept: 'item',
-        drop: (item) => onDrop(item),
-        collect: (monitor) => ({
-            isOver: monitor.isOver(),
-        }),
-    }));
-
-    return (
-        <div
-            ref={drop}
-            style={{
-                border: `1px dashed ${isOver ? 'green' : 'black'}`,
-                padding: '10px',
-            }}>
-            Drop here
-        </div>
-    );
-};
